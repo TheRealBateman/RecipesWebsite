@@ -16,7 +16,7 @@ function App() {
                     <th>id</th>
                     <th>name</th>
                     <th>description</th>
-                   
+
                 </tr>
             </thead>
             <tbody>
@@ -25,7 +25,9 @@ function App() {
                         <td>{recipe.id}</td>
                         <td>{recipe.recipeName}</td>
                         <td>{recipe.description}</td>
-                        
+                        <td>{recipe.ingredients}</td>
+                        <td>{recipe.directions}</td>
+
                     </tr>
                 )}
             </tbody>
@@ -38,7 +40,7 @@ function App() {
             {contents}
         </div>
     );
-    
+
     async function populateRecipes() {
         const response = await fetch('https://localhost:7132/api/Recipes');
         const data = await response.json();

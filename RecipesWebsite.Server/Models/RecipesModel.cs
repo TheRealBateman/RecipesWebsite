@@ -15,5 +15,7 @@ namespace RecipesWebsite.Server.Models
         public string Id { get; set; }
         public string RecipeName { get; set; }
         public string Description { get; set; }
+        public List<string> Ingredients { get; set; }
+        public List<string> Directions { get; set; }
     }
 }
